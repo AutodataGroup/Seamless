@@ -142,6 +142,6 @@ $response_body_string = mcrypt_decrypt($encryption_method, $encryption_key, hex2
 //   <RedirectUrl>http://seamlesslink</RedirectUrl>
 //   <EndUserId>GA2</EndUserId>
 // </Response>
-
+$response_body_xml = new SimpleXMLElement($response_body_string);
 echo "seamless link is: " . $response_body_xml->RedirectUrl;
 
